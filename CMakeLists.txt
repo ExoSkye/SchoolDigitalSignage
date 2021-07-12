@@ -7,5 +7,4 @@ project(SchoolDigitalSignage)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(CI_TEST test.cpp)
-set_property(GLOBAL PROPERTY MSVC_RUNTIME_LIBRARY "MultiThreaded")
+# USE THIS WHEN CREATING TARGETS: set_property(TARGET <target> PROPERTY MSVC_RUNTIME_LIBRARY "MultiThreaded")
