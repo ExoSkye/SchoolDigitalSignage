@@ -30,4 +30,4 @@ jobs:
       with:
         name: 'SDSService'
         # A file, directory or wildcard pattern that describes what to upload
-        path: ${{github.workspace}}/build
+        path: ${{github.workspace}}/build/${{ matrix.build_type }}/
