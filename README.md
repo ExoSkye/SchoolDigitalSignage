@@ -4,7 +4,7 @@ Digital Signage Solution for my school
 ## Architechture
 
 ### Server
-Windows Service acts as the server and uses two TCP ports to send and recieve information
+Windows Service acts as the server and uses TCP to send and recieve information
 
 Written in C++ using ASIO
 
@@ -15,7 +15,7 @@ Client written in C++ using SDL
 
 ## User utilities
 
-Controller GUI which connects to the server via one of the TCP ports and allows rules to be set in an easy to use interface
+Controller GUI which connects to the server via TCP and allows rules to be set in an easy to use interface
 
 ## Capabilites
 
