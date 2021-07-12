@@ -1,0 +1,3 @@
+[submodule "SDSService"]
+	path = SDSService
+	url = https://github.com/ProtoByter/windows-service
