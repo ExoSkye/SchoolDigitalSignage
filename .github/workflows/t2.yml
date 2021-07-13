@@ -26,7 +26,7 @@ jobs:
          sudo apt-get install git rsync cmake subversion gcc
          
 
-         svn co http://svn.exactcode.de/t2/trunk t2-trunk
+         svn co http://svn.exactcode.de/t2/trunk t2-trunk -q
          cd t2-trunk
 
          svn switch http://svn.exactcode.de/t2/tags/21.7
