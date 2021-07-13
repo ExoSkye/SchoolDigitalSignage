@@ -18,19 +18,21 @@ jobs:
 
     steps:
 
-      - uses: actions/checkout@v2
+      - name: Checkout Repo
+        uses: actions/checkout@v2
 
-      - run: |
+      - name: Install dependencies
+        run: |
          sudo apt update
          sudo apt upgrade
          sudo apt-get install git rsync cmake subversion gcc
          
-
+      - name: Checkout t2sde subversion repo
+        run: |
          svn co http://svn.exactcode.de/t2/trunk t2-trunk -q
          cd t2-trunk
 
          svn switch http://svn.exactcode.de/t2/tags/21.7
-         echo To be completed
         
         
 
