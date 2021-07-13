@@ -1,0 +1,33 @@
+name: t2Build
+on:
+ 
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+  
+  workflow_dispatch:
+
+
+jobs:
+
+  build:
+    
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - uses: actions/checkout@v2
+
+      - run: |
+        apt-get install git rsync cmake libc6-i386 lib32z1 lib32stdc++6 subversion gcc
+        
+        svn co http://svn2.exactcode.de/t2/trunk t2-trunk
+        cd t2-trunk
+        
+        svn switch http://svn.exactcode.de/t2/tags/21.7
+        echo To be completed
+        
+        
+
