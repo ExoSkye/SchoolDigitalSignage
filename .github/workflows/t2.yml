@@ -21,9 +21,12 @@ jobs:
       - uses: actions/checkout@v2
 
       - run: |
-         sudo apt-get install git rsync cmake libc6-i386 lib32z1 lib32stdc++6 subversion gcc
+         sudo apt update
+         sudo apt upgrade
+         sudo apt-get install git rsync cmake subversion gcc
+         
 
-         svn co http://svn2.exactcode.de/t2/trunk t2-trunk
+         svn co http://svn.exactcode.de/t2/trunk t2-trunk
          cd t2-trunk
 
          svn switch http://svn.exactcode.de/t2/tags/21.7
