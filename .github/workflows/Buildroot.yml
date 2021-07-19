@@ -43,4 +43,4 @@ jobs:
           # Artifact name
           name: image
           # A file, directory or wildcard pattern that describes what to upload
-          path: $GITHUB_WORKSPACE/buildroot-2021.05/output/images/
+          path: ${{ github.workspace }}/buildroot-2021.05/output/images/sdcard.img
