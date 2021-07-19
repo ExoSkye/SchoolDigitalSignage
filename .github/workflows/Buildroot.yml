@@ -26,6 +26,7 @@ jobs:
         run: |
           wget https://buildroot.org/downloads/buildroot-2021.05.tar.bz2
           tar xf buildroot-2021.05.tar.bz2
+          ls -la
       
       - name: Copy configuration file
         run: |
@@ -42,4 +43,4 @@ jobs:
           # Artifact name
           name: image
           # A file, directory or wildcard pattern that describes what to upload
-          path: $GITHUB_WORKSPACE/buildroot-2021.05/output/images/sdcard.img
+          path: $GITHUB_WORKSPACE/buildroot-2021.05/output/images/
