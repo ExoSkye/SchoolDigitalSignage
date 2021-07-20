@@ -9,9 +9,9 @@ Windows Service acts as the server and uses TCP to send and recieve information
 Written in C++ using ASIO
 
 ### Client
-Raspberry Pis (armhf) running a customised version of t2 Linux (21.7)
+Raspberry Pis (armhf/arm64) running buildroot
 
-Client written in C++ using SDL
+Client written in C++ using SDL and libdrm
 
 ## User utilities
 
