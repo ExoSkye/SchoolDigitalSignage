@@ -30,7 +30,7 @@ jobs:
       
       - name: Copy configuration file
         run: |
-          cp $GITHUB_WORKSPACE/Buildroot/.config_pi4 $GITHUB_WORKSPACE/buildroot-2021.05
+          cp $GITHUB_WORKSPACE/Buildroot/.config_pi4 $GITHUB_WORKSPACE/buildroot-2021.05/.config
           
       - name: Build buildroot image
         run: |
