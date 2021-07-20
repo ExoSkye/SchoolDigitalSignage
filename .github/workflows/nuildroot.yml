@@ -44,6 +44,6 @@ jobs:
         uses: actions/upload-artifact@v2.2.4
         with:
           # Artifact name
-          name: image
+          name: image_${{ matrix.target }}
           # A file, directory or wildcard pattern that describes what to upload
           path: ${{ github.workspace }}/buildroot-2021.05/output/images/sdcard.img
