@@ -13,7 +13,7 @@
     },
     {
       "name": "x64-Release",
-      "generator": "Ninja",
+      "generator": "Visual Studio 16 2019 Win64",
       "configurationType": "RelWithDebInfo",
       "buildRoot": "${projectDir}\\out\\build\\${name}",
       "installRoot": "${projectDir}\\out\\install\\${name}",
@@ -24,6 +24,21 @@
       "variables": [
         {
           "name": "ADMIN_ONLY",
+          "value": "False",
+          "type": "BOOL"
+        },
+        {
+          "name": "BUILD_GUI",
+          "value": "True",
+          "type": "BOOL"
+        },
+        {
+          "name": "ASIO_INCLUDE_DIR",
+          "value": "C:/Users/Avalibit/source/repos/SchoolDigitalSignage/asio/asio/include/",
+          "type": "PATH"
+        },
+        {
+          "name": "BUILD_CLIENT",
           "value": "False",
           "type": "BOOL"
         }
