@@ -9,9 +9,12 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
-  pi4_build:
+  build:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        target: ["pi4","pi0w"]
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -30,7 +33,7 @@ jobs:
       
       - name: Copy configuration file
         run: |
-          cp $GITHUB_WORKSPACE/Buildroot/.config_pi4 $GITHUB_WORKSPACE/buildroot-2021.05/.config
+          cp $GITHUB_WORKSPACE/Buildroot/.config_${{ matrix.target }} $GITHUB_WORKSPACE/buildroot-2021.05/.config
           
       - name: Build buildroot image
         run: |
@@ -41,6 +44,6 @@ jobs:
         uses: actions/upload-artifact@v2.2.4
         with:
           # Artifact name
-          name: image
+          name: image_${{ matrix.target }}
           # A file, directory or wildcard pattern that describes what to upload
           path: ${{ github.workspace }}/buildroot-2021.05/output/images/sdcard.img
