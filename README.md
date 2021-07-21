@@ -15,7 +15,9 @@ Client written in C++ using SDL and libdrm
 
 ## User utilities
 
-Controller GUI which connects to the server via TCP and allows rules to be set in an easy to use interface
+- Controller GUI which connects to the server via TCP and allows rules to be set in an easy to use interface
+
+- Web UI which does the same as the desktop GUI but is a web UI based on Astro
 
 ## Capabilites
 
